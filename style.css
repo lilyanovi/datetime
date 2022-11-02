@@ -1,0 +1,52 @@
+.field-checkbox {
+    display: block;
+  }
+  .checkbox {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: block;
+    margin: 1em;
+  }
+  .checkbox > .input-checkbox {
+    display: none;
+  }
+  .checkbox .text {
+    color: #6a759b;
+  }
+  .checkbox .flag {
+    display: inline-block;
+    width: 64px;
+    height: 40px;
+    border-radius: 20px;
+    vertical-align: middle;
+    transition: 0.25s 0.09s;
+    position: relative;
+    background: #deeff7;
+  }
+  .checkbox .flag:after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.4);
+    transition: 0.15s;
+  }
+  .checkbox > .input-checkbox:checked + i {
+    background: #1094fb;
+  }
+  .checkbox > .input-checkbox:checked + .flag + .text {
+    color: #29316b;
+  }
+  .checkbox > .input-checkbox:checked + .flag:after {
+    transform: translateX(25px);
+  }
+  
+  .hidden {
+    display: none;
+  }
