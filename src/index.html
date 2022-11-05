@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datetime superapp</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./src/main.js" type="module"></script>
+    <link rel="stylesheet" href="./style.css" />
+
+  </head>
+  <body>
+    <a href="./sound/whatsapp_iphone.mp3"></a>
+    <fieldset class="field-checkbox">
+      <label class="checkbox">
+        <input class="input-checkbox" type="checkbox" />
+        <i class="flag"></i>
+        <span class="text">Переключиться на таймер</span>
+      </label>
+    </fieldset>
+    <form id="datecalc">
+      <h3>Калькулятор дат</h3>
+      <label>
+        <strong>Первая дата:</strong>
+        <input type="date" name="firstDate" />
+      </label>
+      <label>
+        <strong>Вторая дата:</strong>
+        <input type="date" name="secondDate" />
+      </label>
+      <button type="submit">Расчитать промежуток</button>
+      <p id="datecalc__result"></p>
+    </form>
+    <form id="timer" class="hidden">
+      <h3>Таймер</h3>
+      Установить таймер:
+      <input type="text" class="timer_time_install" placeholder="0"></input>
+      <div class="timer_time"></div>
+        <button
+          data-test="start"
+          class="timer_btn_start"
+        >
+          СТАРТ
+        </button>
+        <button
+          class="timer_btn_stop"
+          disabled="disabled"
+        >
+          СТОП
+        </button>
+      </div>
+    </form>
+    <p id="demo"></p>
+  </body>
+</html>
